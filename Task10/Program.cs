@@ -17,8 +17,7 @@ Console.WriteLine($"Вторая цифра этого числа -> {secondNumb
 
 int SecondNumber(int num)
 {
-    int secondDigit = num / 10;
-    return secondDigit % 10;
+    return num / 10 % 10;
 }
 
 
