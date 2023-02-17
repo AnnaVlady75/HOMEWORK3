@@ -6,12 +6,18 @@
 // 1 -> нет
 
 Console.WriteLine("Введите цифру: ");
-int figureWeek = Convert.ToInt32(Console.ReadLine());
+int digit = Convert.ToInt32(Console.ReadLine());
 
-if (Weekend(figureWeek)) Console.WriteLine("->День является выходным");
-else Console.WriteLine("->День НЕ является выходным");
+if (Weekend(digit))
+    Console.WriteLine("Это выходной ");
+else Console.WriteLine("Это НЕ выходной! ");
 
-bool Weekend(int fig)
+if (digit > 7)
+    
+    Console.WriteLine("Это НЕ день недели! ");
+    return;
+
+bool Weekend(int weekdig)
 {
-    return fig == 6 || fig == 7;
+    return weekdig > 5;
 }
