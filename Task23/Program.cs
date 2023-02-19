@@ -8,7 +8,7 @@ int number  = Prompt("Введите натуральное число: ");
 
 
 if (number > 0) TableСubes(number);
-else Console.WriteLine("Dведено НЕнатуральное число ");
+else Console.WriteLine("Введено НЕнатуральное число ");
 
 void TableСubes(int num)
 {
