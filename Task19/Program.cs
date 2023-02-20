@@ -7,32 +7,25 @@
 Console.WriteLine("Введите пятизначное число ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if (number > 9999 && number <= 99999) IsPalindrome(number);
-else Console.WriteLine($"Ошибка ввода: число {number} НЕ пятизначное ");
+if (number <= 9999 || number > 99999)
+    Console.WriteLine($"Ошибка ввода: число {number} НЕ пятизначное ");
+else if (IsPalindrome(number))
+    Console.Write($"Число {number} является палиндромом");
+else
+    Console.Write($"Число {number} НЕ является палиндромом");
 
-
-
-void IsPalindrome(int num)
+bool IsPalindrome(int num)
 {
     int firstPair = num;
-    int lastpair = 0;
+    int lastPair = 0;
     while (firstPair != 0)
     {
         int lastDigit = firstPair % 10;
-        lastpair = lastpair * 10 + lastDigit;
+        lastPair = lastPair * 10 + lastDigit;
         firstPair = firstPair / 10;
     }
-    if(num == lastpair)
-    {
-        Console.Write($"Число {num} является палиндромом");
-    }
-    else
-    {
-        Console.Write($"Число {num} НЕ является палиндромом");
-    }
+    return (num == lastPair);
 }
-
-
 
 
 
