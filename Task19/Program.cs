@@ -16,15 +16,15 @@ else
 
 bool IsPalindrome(int num)
 {
-    int firstPair = num;
-    int lastPair = 0;
-    while (firstPair != 0)
+    int newNum = num;
+    int res = 0;
+    while (newNum != 0)
     {
-        int lastDigit = firstPair % 10;
-        lastPair = lastPair * 10 + lastDigit;
-        firstPair = firstPair / 10;
+        int lastDigit = newNum % 10;
+        res = res * 10 + lastDigit;
+        newNum = newNum / 10;
     }
-    return (num == lastPair);
+    return (num == res);
 }
 
 

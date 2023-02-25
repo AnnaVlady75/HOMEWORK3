@@ -9,8 +9,8 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
-if (numberB > 0) 
-Console.WriteLine($"{numberA} в степени {numberB} -> {NumberPow(numberA, numberB)}");
+if (numberB > 0)
+    Console.WriteLine($"{numberA} в степени {numberB} -> {NumberPow(numberA, numberB)}");
 else Console.WriteLine($"Ошибка ввода: число {numberB} НЕ натуральное");
 
 
@@ -23,8 +23,8 @@ int NumberPow(int numA, int numB)
         {
             count *= numA;
         }
-            }
-return count;
+    }
+    return count;
 }
 
 
