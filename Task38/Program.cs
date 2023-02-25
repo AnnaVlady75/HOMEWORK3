@@ -52,5 +52,5 @@ double[] array = CreateArrayRndDouble(5, -100, 100);
 PrintArrayDouble(array);
 Console.Write(" -> ");
 double diffMaxMin = MaxElems(array) - MinElems(array);
-Console.WriteLine(diffMaxMin);
+Console.WriteLine(Math.Round(diffMaxMin, 1, MidpointRounding.ToZero));
 

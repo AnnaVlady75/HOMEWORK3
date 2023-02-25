@@ -38,7 +38,7 @@ int QuantityPositiveElems(int[] arr)
     return quantity ;
 }
 
-int[] array = CreateArrayRndInt(5, 100, 1000);
+int[] array = CreateArrayRndInt(5, 100, 999);
 PrintArray(array);
 Console.Write(" -> ");
 Console.WriteLine(QuantityPositiveElems(array));
