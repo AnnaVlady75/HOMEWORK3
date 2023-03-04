@@ -10,12 +10,12 @@
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
-    int[,] matrix = new int[rows, columns]; // 0 ,  1
+    int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
 
-    for (int i = 0; i < matrix.GetLength(0); i++) // rows
+    for (int i = 0; i < matrix.GetLength(0); i++) 
     {
-        for (int j = 0; j < matrix.GetLength(1); j++) // columns
+        for (int j = 0; j < matrix.GetLength(1); j++) 
         {
             matrix[i, j] = rnd.Next(min, max + 1);
         }
@@ -40,11 +40,11 @@ int rows = Convert.ToInt32(Console.ReadLine()); ;
 Console.WriteLine("Введите позицию столбца: ");
 int columns = Convert.ToInt32(Console.ReadLine()); ;
 
-int[,] array2d = CreateMatrixRndInt(3, 3, 0, 10);
+int[,] array2d = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(array2d);
-if (rows < 0 && rows > array2d.GetLength(0)
-    || columns < 0 && columns > array2d.GetLength(1))
+if (rows < 0 || rows > array2d.GetLength(0)
+     || columns < 0 || columns > array2d.GetLength(1))
     Console.WriteLine("Такого элемента в массиве нет");
-else Console.WriteLine($"{rows}, {columns}");
+else Console.WriteLine($"Значение этого элемента -> {array2d[rows,columns]}");
 
 
